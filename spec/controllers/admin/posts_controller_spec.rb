@@ -81,10 +81,10 @@ module Enki
         do_put
       end
 
-      it 'it redirects to show' do
+      it 'it redirects to index' do
         do_put
         response.should be_redirect
-        response.should redirect_to(admin_post_path(@post))
+        response.should redirect_to(admin_posts_path)
       end
     end
 

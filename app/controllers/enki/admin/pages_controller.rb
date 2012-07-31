@@ -18,7 +18,7 @@ module Enki
           respond_to do |format|
             format.html {
               flash[:notice] = "Created page '#{@page.title}'"
-              redirect_to enki.admin_page_path(@page)
+              redirect_to enki.admin_pages_path
             }
           end
         else
@@ -33,7 +33,7 @@ module Enki
           respond_to do |format|
             format.html {
               flash[:notice] = "Updated page '#{@page.title}'"
-              redirect_to enki.admin_page_path(@page)
+              redirect_to enki.admin_pages_path
             }
           end
         else

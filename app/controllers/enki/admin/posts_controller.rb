@@ -17,7 +17,7 @@ module Enki
           respond_to do |format|
             format.html {
               flash[:notice] = "Created post '#{@post.title}'"
-              redirect_to(enki.admin_post_path(@post))
+              redirect_to(enki.admin_posts_path)
             }
           end
         else
@@ -32,7 +32,7 @@ module Enki
           respond_to do |format|
             format.html {
               flash[:notice] = "Updated post '#{@post.title}'"
-              redirect_to(enki.admin_post_path(@post))
+              redirect_to(enki.admin_posts_path)
             }
           end
         else
