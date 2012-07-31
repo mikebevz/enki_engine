@@ -1,7 +1,7 @@
 <fieldset>
 	<%= form.input :title -%>
 	<%= form.input :slug, :hint => "Leave blank for an auto-generated slug based on the title." -%>
-	<%= form.input :body, :hint => "<a href='http://textile.thresholdstate.com/'>Textile enabled</a>. Use Ctrl+E to switch between preview and edit mode.".html_safe -%>
+	<%= form.input :body, :hint => "<a target='_blank' href='http://textile.thresholdstate.com/'>Textile enabled</a>. Use Ctrl+E to switch between preview and edit mode.".html_safe -%>
 </fieldset>
 <%= render :partial => 'enki/admin/posts/upload_form', :locals => { :form => form } -%>
 <%= render :partial => 'enki/admin/posts/taggings_form', :locals => { :form => form } if tags? -%>
