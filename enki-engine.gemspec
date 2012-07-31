@@ -5,7 +5,7 @@ require "enki/version"
 Gem::Specification.new do |s|
   s.name        = "enki-engine"
   s.version     = Enki::VERSION
-  s.date        = "2012-02-22"
+  s.date        = `git log -1 --format="%cd" --date=short lib/enki/version.rb`
   s.authors     = ["James McCarthy", "Andy Triggs", "Xavier Shay"]
   s.email       = ["james2mccarthy@gmail.com"]
   s.homepage    = "http://github.com/ThisIsHatch/enki_engine"
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'coderay'
   s.add_runtime_dependency 'lesstile'
   s.add_runtime_dependency 'simple_form'
-  
+
   s.add_development_dependency 'acts-as-taggable-on'
   s.add_development_dependency 'rails',           "~> 3.2"
   s.add_development_dependency 'rspec-rails',     ">= 2.9"
